@@ -97,13 +97,13 @@ class _LogInScreenState extends State<LogInScreen> {
   @override
   void initState() {
     super.initState();
-    controllerIdle = SimpleAnimation(AnimationEnums.idle.name);
-    controllerHandsUp = SimpleAnimation(AnimationEnums.handsUp.name);
-    controllerHandsDown = SimpleAnimation(AnimationEnums.handsDown.name);
-    controllerLookRight = SimpleAnimation(AnimationEnums.lookDownRight.name);
-    controllerLookLeft = SimpleAnimation(AnimationEnums.lookDownLeft.name);
-    controllerSuccess = SimpleAnimation(AnimationEnums.success.name);
-    controllerFail = SimpleAnimation(AnimationEnums.fail.name);
+    controllerIdle = SimpleAnimation(AnimationEnum.idle.name);
+    controllerHandsUp = SimpleAnimation(AnimationEnum.Hands_up.name);
+    controllerHandsDown = SimpleAnimation(AnimationEnum.hands_down.name);
+    controllerLookRight = SimpleAnimation(AnimationEnum.Look_down_right.name);
+    controllerLookLeft = SimpleAnimation(AnimationEnum.Look_down_left.name);
+    controllerSuccess = SimpleAnimation(AnimationEnum.success.name);
+    controllerFail = SimpleAnimation(AnimationEnum.fail.name);
 
     rootBundle.load('images/login_animation.riv').then((data) {
       final file = RiveFile.import(data);
@@ -191,7 +191,7 @@ class _LogInScreenState extends State<LogInScreen> {
                         value != password ? "Wrong password" : null,
                   ),
                   SizedBox(
-                    height: size.height * 0.05,
+                    height: size.height * 0.020,
                   ),
                   Container(
                     width: double.infinity,
